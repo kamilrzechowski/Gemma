@@ -1,0 +1,7 @@
+Gemma.apk for Android
+
+Instalation file for Gemma interactive app. To instal:
+1. Copy the file into your phone.
+2. Instal file, by opening it (IMPORTANT - internal storage only)
+3. Phone may ask, if you are sure, becouse file is from unknown source and may be potential threat.
+It is becouse app is not digitaly signed and is not checked by google. Choose I acept the risk, in order to install the app.

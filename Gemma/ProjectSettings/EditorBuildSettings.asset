@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BluetoothConnection.unity
+    guid: 70a87449dab2c8f43a2ecf342db2e5fe
+  - enabled: 0
+    path: Assets/Scenes/YourName.unity
+    guid: 6ffb31be8635d1f4fbae558c6dfff82f
+  - enabled: 1
+    path: Assets/Scenes/Instruction_p1.unity
+    guid: 9dd5e51f2fff9cb47a3c7ac8e9ded45a
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e9ac8f5cb2800cc42a56edda9d222ee4
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: 040eafa2699de8e43a28e7cccb555f7f
+  - enabled: 1
+    path: Assets/Scenes/VideoMenu.unity
+    guid: 8ee3c293f88028e4da42b3bafd089d98
+  - enabled: 1
+    path: Assets/Scenes/Game1.unity
+    guid: 0e8f7ff5806019844b9e913f555f12d1
+  m_configObjects: {}
