@@ -9,7 +9,7 @@ public class Globals {
 
     private static Globals instance;
     private ArrayList<BluetoothDevice> mDiscoveredBLDevices;
-    private boolean connected = false;
+    private int connected = 0;  //0 - disconnected, 1 - connecting, 2 - conneceted
 
     // Restrict the constructor from being instantiated
     private Globals(){}
@@ -32,11 +32,11 @@ public class Globals {
         this.mDiscoveredBLDevices = mDeviceList;
     }
 
-    public void setConnectionState(boolean connected){
+    public void setConnectionState(int connected){
         this.connected = connected;
     }
 
-    public boolean getConnectionState(){
+    public int getConnectionState(){
         return this.connected;
     }
 }

@@ -178,15 +178,15 @@ public class MainService extends Service {
                 case Constants.MESSAGE_STATE_CHANGE:
                     switch (msg.arg1) {
                         case BluetoothConnectionService.STATE_CONNECTED:
-                            globals.setConnectionState(true);
+                            globals.setConnectionState(2);
                             break;
                         case BluetoothConnectionService.STATE_CONNECTING:
-                            //setStatus(R.string.title_connecting);
+                            globals.setConnectionState(1);
                             break;
                         case BluetoothConnectionService.STATE_LISTEN:
                         case BluetoothConnectionService.STATE_NONE:
                             //we are disconnected
-                            globals.setConnectionState(false);
+                            globals.setConnectionState(0);
                             break;
                     }
                     break;

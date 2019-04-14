@@ -70,7 +70,7 @@ public class BluetoothPlugin {
             MainService.LocalBinder mLocalBinder = (MainService.LocalBinder)service;
             mService = mLocalBinder.getServerInstance();
             //scan for new devices if we are not connected
-            if(!globals.getConnectionState()){
+            if(globals.getConnectionState() == 0){
                 scan();
             }
         }
@@ -103,7 +103,7 @@ public class BluetoothPlugin {
         }
     }
 
-    public boolean isConnected(){
+    public int isConnected(){
         return globals.getConnectionState();
     }
 
@@ -114,4 +114,6 @@ public class BluetoothPlugin {
         }
         return false;
     }
+
+    //TODO: 3 stages - disconnected, connecting, connected
 }
