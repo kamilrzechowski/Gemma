@@ -12,17 +12,17 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: GreenThumbGuyz
   productName: Gemma
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.77254903, g: 0.827451, b: 0.003921569, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -39,8 +39,12 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: e0866a3fe6007224a9e3078d831ce6fc,
+  m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: 21300000, guid: 60e627cb91dec574fb06b6e99f17c22a, type: 3}
+    duration: 2
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 264807bb2ba1ba24daeba940d6cdbade,
     type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -154,11 +158,11 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.vuforia.engine.CoreSamplesUnity
+    Android: com.GreenThumbGuyz.Gemma
     iOS: com.vuforia.engine.CoreSamplesUnity
   buildNumber:
     iOS: 0
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 28
   AndroidPreferredInstallLocation: 2
@@ -247,8 +251,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Kamil_Unity/Gemma/publishing/gemma.keystore
+  AndroidKeyaliasName: gemma
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -265,7 +269,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: ad7a2f9e4d2bc5d489faf918cf896f23, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -303,73 +307,73 @@ PlayerSettings:
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: b15ee11232b424d68898398fe3cab2d0, type: 3}
+      - {fileID: 2800000, guid: 86654ab453c7bcf4aab0af7faaa7adbb, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: fe689abc1067e4869a58c87d14482078, type: 3}
+      - {fileID: 2800000, guid: 43b449fea63b508489856169bd13ddbf, type: 3}
       m_Width: 144
       m_Height: 144
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 827b731c62d8d42c093899fa44179bb2, type: 3}
+      - {fileID: 2800000, guid: 82fdeec022863c149966b56ecd33bb6b, type: 3}
       m_Width: 96
       m_Height: 96
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: d85ccead4ae714b0682b281b94267e7f, type: 3}
+      - {fileID: 2800000, guid: 4b456220bf05a1144bc0d94ebd112993, type: 3}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 6fae8ff752f494bacb3c562bed7dea2d, type: 3}
+      - {fileID: 2800000, guid: 42908da773f10464b927de27477782f1, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 98e9bf2eec31e492d858fd08e8223ca4, type: 3}
+      - {fileID: 2800000, guid: b3e02e6e6f780074e8001a9091ce58c4, type: 3}
       m_Width: 36
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: b15ee11232b424d68898398fe3cab2d0, type: 3}
+      - {fileID: 2800000, guid: 86654ab453c7bcf4aab0af7faaa7adbb, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: fe689abc1067e4869a58c87d14482078, type: 3}
+      - {fileID: 2800000, guid: 43b449fea63b508489856169bd13ddbf, type: 3}
       m_Width: 144
       m_Height: 144
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 827b731c62d8d42c093899fa44179bb2, type: 3}
+      - {fileID: 2800000, guid: 82fdeec022863c149966b56ecd33bb6b, type: 3}
       m_Width: 96
       m_Height: 96
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: d85ccead4ae714b0682b281b94267e7f, type: 3}
+      - {fileID: 2800000, guid: 4b456220bf05a1144bc0d94ebd112993, type: 3}
       m_Width: 72
       m_Height: 72
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 6fae8ff752f494bacb3c562bed7dea2d, type: 3}
+      - {fileID: 2800000, guid: 42908da773f10464b927de27477782f1, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 1
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 98e9bf2eec31e492d858fd08e8223ca4, type: 3}
+      - {fileID: 2800000, guid: b3e02e6e6f780074e8001a9091ce58c4, type: 3}
       m_Width: 36
       m_Height: 36
       m_Kind: 1

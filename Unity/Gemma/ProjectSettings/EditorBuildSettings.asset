@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SplashScreen.unity
+    guid: eb8c5d60c879c3c48a802d3e3667e53c
   - enabled: 1
     path: Assets/Scenes/BluetoothConnection.unity
     guid: 70a87449dab2c8f43a2ecf342db2e5fe
-  - enabled: 0
-    path: Assets/Scenes/YourName.unity
-    guid: 6ffb31be8635d1f4fbae558c6dfff82f
   - enabled: 1
     path: Assets/Scenes/Instruction_p1.unity
     guid: 9dd5e51f2fff9cb47a3c7ac8e9ded45a
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game1.unity
     guid: 0e8f7ff5806019844b9e913f555f12d1
+  - enabled: 1
+    path: Assets/Scenes/BluetoothDebuging.unity
+    guid: 0ce0db1971c81c3459c75b737fb281a8
   m_configObjects: {}

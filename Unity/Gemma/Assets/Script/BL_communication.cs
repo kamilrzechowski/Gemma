@@ -5,7 +5,6 @@ using System;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.SceneManagement;
-using UnityEngine.Android;
 
 public class BL_communication : MonoBehaviour
 {
@@ -47,10 +46,18 @@ public class BL_communication : MonoBehaviour
     public Dropdown mDropdown;
     public GameObject ConnectionPanle, MessagePannel;
     public InputField childeName;
+    public Text connectionStatusText;
     //variables
     private List<string> deviceList;
     private string connectedDeviceName;
-    private bool isConnected = false, connectionScreen = true;
+    private bool connectionScreen = true;
+    private int isConnected = 0;    //0 - disconnected, 1 - connecting, 2 - conneceted
+    //UI debuging
+    public InputField MsgToSend;
+    public Button btSendMsg;
+    public Text recivedMsg;
+    public Button btDisconnect;
+
 
     private void Awake()
     {
@@ -61,7 +68,7 @@ public class BL_communication : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        //DontDestroyOnLoad(transform.gameObject);
         PluginInstance.Call("onStart");
 
         btScan.onClick.AddListener(Scan);
@@ -70,7 +77,11 @@ public class BL_communication : MonoBehaviour
         deviceList = new List<string>();
         mDropdown.options.Clear();
         mDropdown.AddOptions(deviceList);
-        InvokeRepeating("getAvailableDeviceLsit", 4.0f, 4.0f);
+        InvokeRepeating("getAvailableDeviceLsit", 3.0f, 2.0f);
+
+        //listners for debuging purpose
+        btSendMsg.onClick.AddListener(sendMsg);
+        btDisconnect.onClick.AddListener(disconnect);
     }
 
     //scan for available devices. Scan is automatically call in onStart procedure for 20 seconds. If after this time
@@ -83,13 +94,21 @@ public class BL_communication : MonoBehaviour
     //thread initialized on script start. Responsible for updating 'available device list'
     private void getAvailableDeviceLsit()
     {
-        if (!isConnected)
+        if (isConnected == 0)   //no connection
         {
             mDropdown.options.Clear();
             string availableDevices = PluginInstance.Call<string>("getAvailableDevicesList");
             deviceList = availableDevices.Split(';').ToList();
             deviceList.RemoveAt(deviceList.Count - 1);  //remove last elemnet, becouse it is empty
-            mDropdown.AddOptions(deviceList);
+            if (deviceList.Any())   //if we found at list one device
+            {
+                mDropdown.AddOptions(deviceList);
+            }
+            else
+            {
+                mDropdown.AddOptions(new List<string>{ "no avaliable devices found" });
+            }
+
         }
     }
 
@@ -99,7 +118,7 @@ public class BL_communication : MonoBehaviour
         if (deviceList.Count > 0)
         {
             PluginInstance.Call("connect", mDropdown.value);
-            InvokeRepeating("getConnectionStatus", 0.5f, 3.0f);
+            InvokeRepeating("getConnectionStatus", 0.5f, 1.5f);
             connectedDeviceName = deviceList.ElementAt<string>(mDropdown.value);
         }
     }
@@ -107,14 +126,30 @@ public class BL_communication : MonoBehaviour
     //thread initialized by connect button, updating each 4 seconds
     private void getConnectionStatus()
     {
-        isConnected = PluginInstance.Call<bool>("isConnected");
-        if (isConnected)
+        isConnected = PluginInstance.Call<int>("isConnected");
+        if (isConnected == 2)   //we are connected
         {
             //if we are connected move to the next scene
             if (connectionScreen)
             {
                 changeScreen();
                 connectionScreen = false;
+            }
+            if (connectionStatusText != null)
+            {
+                connectionStatusText.text = "Connected";
+            }
+        } else if(isConnected == 1) //we are connecting
+        {
+            if (connectionStatusText != null)
+            {
+                connectionStatusText.text = "Connecting...";
+            }
+        } else if (isConnected == 0)    //we are disconnected
+        {
+            if (connectionStatusText != null)
+            {
+                connectionStatusText.text = "Disconnected";
             }
         }
     }
@@ -130,7 +165,7 @@ public class BL_communication : MonoBehaviour
     //send message with childe name to server and chnge screen to instruction
     private void sendNameToESP32()
     {
-        if (isConnected)
+        if (isConnected == 2)   //we are connected
         {
             if (PluginInstance.Call<bool>("sendMessgae", childeName.text))
             {
@@ -142,5 +177,27 @@ public class BL_communication : MonoBehaviour
     private void OnDestroy()
     {
         PluginInstance.Call("onStop");
+    }
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///Debuging procedures
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    private void sendMsg()
+    {
+        if(isConnected == 2)    //we are connected
+        {
+            PluginInstance.Call<bool>("sendMessgae", MsgToSend.text);
+        }
+    }
+
+    private void disconnect()
+    {
+        if (isConnected == 2)    //we are connected
+        {
+            //TODO disconnection
+        }
     }
 }
