@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Gemma_logo" size="0.070000 0.070000" />
     <ImageTarget name="pszczola" size="0.100000 0.068007" />
     <ImageTarget name="Queen_of_spades" size="0.060000 0.087000" />
     <ImageTarget name="chaplin" size="0.150000 0.110567" />

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - bluetooth
+  - Txt_time
+  - Txt_color
+  - Txt_color2find
+  - Txt_score
   layers:
   - Default
   - TransparentFX

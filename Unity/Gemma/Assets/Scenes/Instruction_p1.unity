@@ -390,8 +390,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'place me on the sun :), place me on the sun :), place me on the sun :),
-    place me on the sun :), place me on the sun :), '
+  m_Text: Now place flowerpot in nice, sunny place. Since now we will together monitor
+    and take care about the flower.
 --- !u!222 &57812712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2220,8 +2220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'water, water, water, water, water, water, water, water, water, water, water,
-    water, water, water, water, water, water, water, '
+  m_Text: Use water tank to water seeds.
 --- !u!222 &876659432
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2617,9 +2616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'put seeds, put seeds, put seeds, put seeds, put seeds, put seeds, put seeds,
-    put seeds, put seeds, put seeds, put seeds, put seeds, put seeds, put seeds, put
-    seeds, '
+  m_Text: Very good. Now put seeds in the centre  of flowerpot.
 --- !u!222 &1061031438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3570,6 +3567,7 @@ GameObject:
   - component: {fileID: 1329305147}
   - component: {fileID: 1329305146}
   - component: {fileID: 1329305145}
+  - component: {fileID: 1329305149}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3661,6 +3659,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1329305149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329305144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6371f9b5e27d8af449b3895e9658f7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1421693336
 GameObject:
   m_ObjectHideFlags: 0
@@ -4406,14 +4416,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: put the soli, put the soil, put the soli, put the soil, put the soli, put
-    the soil, put the soli, put the soil
+  m_Text: "Hi I\u2019m Gemma. I will help you in taking care about a flower. Let\u2019s
+    get started. Open bag of soil and put almost whole soil inside the pot."
 --- !u!222 &1764101229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4808,8 +4818,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'soil again, soil again, soil again, soil again, soil again, soil again,
-    soil again, soil again, soil again, soil again, '
+  m_Text: Put rest of the soil on top of seeds.
 --- !u!222 &2116225791
 CanvasRenderer:
   m_ObjectHideFlags: 0

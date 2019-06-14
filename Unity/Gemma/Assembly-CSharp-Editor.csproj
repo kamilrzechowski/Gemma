@@ -333,6 +333,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:/Kamil_Unity/Gemma/Assets/System.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Kamil_Unity/Gemma/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>

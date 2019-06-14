@@ -97,17 +97,21 @@
     <Compile Include="Assets\Script\BLE_communication.cs" />
     <Compile Include="Assets\Script\BtExit.cs" />
     <Compile Include="Assets\Script\BtLoadNextScene.cs" />
+    <Compile Include="Assets\Script\Clean.cs" />
+    <Compile Include="Assets\Script\FixRotation.cs" />
+    <Compile Include="Assets\Script\Game2.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\InstructionSwiping.cs" />
     <Compile Include="Assets\Script\ScrollRectSnap.cs" />
+    <Compile Include="Assets\Script\ScrollRectSnap_vertical.cs" />
     <Compile Include="Assets\Script\Singleton.cs" />
     <Compile Include="Assets\Script\SplashScreen.cs" />
+    <Compile Include="Assets\Script\VideoScreen.cs" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
     <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
-    <None Include="Assets\StreamingAssets\Vuforia\AR_demo.xml" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
@@ -115,6 +119,7 @@
     <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\Vuforia_Motorcycle_Marslander.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
+    <None Include="Assets\StreamingAssets\Vuforia\AR_demo.xml" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
     <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
     <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Following Characters.txt" />
@@ -352,6 +357,9 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:/Kamil_Unity/Gemma/Assets/System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>C:/Kamil_Unity/Gemma/Assets/Demigiant/DOTween/DOTween.dll</HintPath>

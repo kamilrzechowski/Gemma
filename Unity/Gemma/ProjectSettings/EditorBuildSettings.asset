@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BluetoothDebuging.unity
     guid: 0ce0db1971c81c3459c75b737fb281a8
+  - enabled: 1
+    path: Assets/Scenes/Demo.unity
+    guid: 7750ff7cf8860c445a1418d8556b2858
+  - enabled: 1
+    path: Assets/Scenes/Game2.unity
+    guid: ade17aaad5de9d14caa4eefbf7b3ac80
+  - enabled: 1
+    path: Assets/Scenes/VideoPlayer.unity
+    guid: c930b57ad0170054f8bc1f5b1b0ba116
   m_configObjects: {}

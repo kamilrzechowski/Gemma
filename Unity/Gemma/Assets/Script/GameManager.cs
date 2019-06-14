@@ -79,7 +79,7 @@ public class GameManager : Singleton<GameManager>
 
     public bool sendMsg(string msg)
     {
-        return PluginInstance.Call<bool>("sendMessgae", msg);
+        return PluginInstance.Call<bool>("sendMessgae", msg + "|");
     }
 
     public void scan()
