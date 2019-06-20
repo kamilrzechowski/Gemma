@@ -76,7 +76,8 @@ public class BL_plug : MonoBehaviour
             //if we are in app (not debug mode) and if we are connected move to the next scene
             if (!debug_mode && connectionScreen)
             {
-                changeScreen();
+                //changeScreen();           //change to get rid of second screen - to undo -> uncomment and delete load new scene
+                SceneManager.LoadScene("Instruction_p1");
                 connectionScreen = false;
             }
             if (connectionStatusText != null)

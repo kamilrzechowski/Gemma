@@ -9,7 +9,7 @@ using Vuforia;
 
 public class Game2 : MonoBehaviour
 {
-    private Text timerText, colorText, color2findText, scoreText;
+    public Text timerText, colorText, color2findText, scoreText;
     public GameObject panel_top, panel_right, panel_bottom, panel_left;
     //public RawImage rawImage;
 
@@ -173,9 +173,9 @@ public class Game2 : MonoBehaviour
         if (t / 60 < dedline)
         {
             //display time left
-            //if (t / 60 > dedline * 0.9)
-            //    timerText.color = new Color(0, 0, 1);
-            //timerText.text = ((int)(dedline - (t / 60))).ToString() + ":" + (60 - (t % 60)).ToString("00");
+            if (t / 60 > dedline * 0.9)
+                timerText.color = new Color(0, 0, 1);
+            timerText.text = ((int)(dedline - (t / 60))).ToString() + ":" + (60 - (t % 60)).ToString("00");
 
             if (mFormatRegistered)
             {
@@ -270,7 +270,7 @@ public class Game2 : MonoBehaviour
                             score++;
                             setColor2FindandScore();
                         }
-                       // colorText.text = colorInfo.color + colorInfo.color_data + " " + varaiance.ToString();
+                       colorText.text = colorInfo.color + colorInfo.color_data + " " + varaiance.ToString();
                     }
                 }
             }
@@ -303,7 +303,7 @@ public class Game2 : MonoBehaviour
         }
     }
 
-    void OnGUI()
+    /*void OnGUI()
     {
         if (first)
         {
@@ -322,7 +322,7 @@ public class Game2 : MonoBehaviour
         GUI.Label(pos_timerText, ((int)(dedline - (t / 60))).ToString() + ":" + (60 - (t % 60)).ToString("00"), txtStyle);
         txtStyle.normal.textColor = mycolor[color2find].color;
         GUI.Label(pos_color2findText, "Find: " + mycolor[color2find].name, txtStyle);
-    }
+    }*/
 
     void DrawQuad(Rect position, Color color)
     {
@@ -394,9 +394,9 @@ public class Game2 : MonoBehaviour
     private void setColor2FindandScore()
     {
         color2find = random.Next(mycolor.Length);
-        //color2findText.color = mycolor[color2find].color;
-        //color2findText.text = "Find: " + mycolor[color2find].name;
-        //scoreText.text = "Score: " + score.ToString();
+        color2findText.color = mycolor[color2find].color;
+        color2findText.text = "Find: " + mycolor[color2find].name;
+        scoreText.text = "Score: " + score.ToString();
     }
 
     private void initTextFileds()
