@@ -1,5 +1,5 @@
 # Gemma
-Gemma is a project of smart flowerpot.  
+Gemma is a project of smart, speaking flowerpot for childrens.  
 
 ## Folders  
 **Android** - contains sourse code used for builing a Bluetooth comuniction plugin for Unity Android.  
